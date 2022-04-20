@@ -1,5 +1,7 @@
 package com.mixx.withkids.domain;
 
+import java.util.Date;
+
 import javax.persistence.*;
 
 @Entity
@@ -15,6 +17,16 @@ public class Payment {
     Status status;
     
     PayType payType;
+
+    Date PayDate;
+
+    public Date getPayDate() {
+        return PayDate;
+    }
+
+    public void setPayDate(Date payDate) {
+        PayDate = payDate;
+    }
 
     public PayType getPayType() {
         return payType;
