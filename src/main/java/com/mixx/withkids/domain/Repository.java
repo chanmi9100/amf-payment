@@ -1,4 +1,4 @@
-package com.demo.payment.domain;
+package com.mixx.withkids.domain;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

@@ -1,4 +1,4 @@
-package com.demo.payment.domain;
+package com.mixx.withkids.domain;
 
 import javax.persistence.*;
 

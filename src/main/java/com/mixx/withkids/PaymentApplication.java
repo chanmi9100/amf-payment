@@ -1,9 +1,6 @@
-package com.demo.payment;
+package com.mixx.withkids;
 
-import com.demo.payment.domain.PayType;
-import com.demo.payment.domain.Payment;
-import com.demo.payment.domain.Repository;
-import com.demo.payment.domain.Status;
+import com.mixx.withkids.domain.*;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
