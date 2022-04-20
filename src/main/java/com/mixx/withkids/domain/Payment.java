@@ -18,14 +18,25 @@ public class Payment {
     
     PayType payType;
 
-    Date PayDate;
+    Date createDate;
 
-    public Date getPayDate() {
-        return PayDate;
+    Date updateDate;
+
+
+    public Date getCreateDate() {
+        return createDate;
     }
 
-    public void setPayDate(Date payDate) {
-        PayDate = payDate;
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
+    }
+
+    public Date getUpdateDate() {
+        return updateDate;
+    }
+
+    public void setUpdateDate(Date updateDate) {
+        this.updateDate = updateDate;
     }
 
     public PayType getPayType() {
