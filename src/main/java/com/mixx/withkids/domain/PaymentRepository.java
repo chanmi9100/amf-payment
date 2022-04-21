@@ -2,6 +2,6 @@ package com.mixx.withkids.domain;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface Repository extends JpaRepository<Payment, Long>{
+public interface PaymentRepository extends JpaRepository<Payment, Long>{
     
 }

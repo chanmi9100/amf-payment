@@ -92,3 +92,11 @@ MariaDB [petstore]> select * from Pet;
 - Store 업무 영역의 추가
 - 비대한 Monolith
 - https://github.com/msa-school/ddd-petstore-level7-big-ball-of-mud
+
+
+## httpie
+- 쿠폰 등록
+http :8080/coupons couponAmount="10000"
+
+- 결재 시 쿠폰 사용
+http :8080/payments amount=30000 reservationId="A02" coupons:='["http://localhost:8080/coupons/18"]'

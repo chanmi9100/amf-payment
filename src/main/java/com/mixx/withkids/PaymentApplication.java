@@ -17,7 +17,7 @@ public class PaymentApplication {
 	public static void main(String[] args) {
 		applicationContext = SpringApplication.run(PaymentApplication.class, args);
 
-		Repository repository = applicationContext.getBean(Repository.class);
+		PaymentRepository repository = applicationContext.getBean(PaymentRepository.class);
 
 		Payment payment = new Payment();
 		payment.setAmount(Long.valueOf(10000));

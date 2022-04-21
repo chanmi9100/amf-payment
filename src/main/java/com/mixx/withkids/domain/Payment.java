@@ -1,6 +1,7 @@
 package com.mixx.withkids.domain;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.*;
 
@@ -22,6 +23,17 @@ public class Payment {
 
     Date updateDate;
 
+    @OneToMany
+    List<Coupon> Coupons;
+
+
+    public List<Coupon> getCoupons() {
+        return Coupons;
+    }
+
+    public void setCoupons(List<Coupon> coupons) {
+        Coupons = coupons;
+    }
 
     public Date getCreateDate() {
         return createDate;
