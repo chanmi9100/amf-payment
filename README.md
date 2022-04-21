@@ -1,5 +1,16 @@
 # AMF 결제 도메인 구현
 
+## httpie
+- 쿠폰 등록
+http :8080/coupons couponAmount="10000"
+
+- 결제 등록
+http :8080/payments amount=30000 reservationId="A02"
+
+- 쿠폰에 결제 정보 수정
+http PATCH :8080/coupons/21 payments="http://localhost:8080/payments/22"
+http PATCH :8080/coupons/21 payment_id=22 // 이건 불가능, 도메인 구조상
+
 # 시작하기
 
 ## Base Project 다운로드 및 실행
@@ -94,12 +105,3 @@ MariaDB [petstore]> select * from Pet;
 - https://github.com/msa-school/ddd-petstore-level7-big-ball-of-mud
 
 
-## httpie
-- 쿠폰 등록
-http :8080/coupons couponAmount="10000"
-
-- 결제 등록
-http :8080/payments amount=30000 reservationId="A02"
-
-- 쿠폰에 결제 정보 수정
-http PATCH :8080/coupons/22 payments="http://localhost:8080/payments/22"
