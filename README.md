@@ -98,5 +98,8 @@ MariaDB [petstore]> select * from Pet;
 - 쿠폰 등록
 http :8080/coupons couponAmount="10000"
 
-- 결재 시 쿠폰 사용
-http :8080/payments amount=30000 reservationId="A02" coupons:='["http://localhost:8080/coupons/18"]'
+- 결제 등록
+http :8080/payments amount=30000 reservationId="A02"
+
+- 쿠폰에 결제 정보 수정
+http PATCH :8080/coupons/22 payments="http://localhost:8080/payments/22"

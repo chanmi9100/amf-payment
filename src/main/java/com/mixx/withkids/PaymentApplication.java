@@ -27,7 +27,7 @@ public class PaymentApplication {
 
 		repository.save(payment);
 
-		System.out.println(repository.findById(Long.valueOf(1)).get().getReservationId() == "A01");
+		// System.out.println(repository.findById(Long.valueOf(1)).get().getReservationId() == "A01");
 	}
 
 }

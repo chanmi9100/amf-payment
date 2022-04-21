@@ -23,17 +23,17 @@ public class Payment {
 
     Date updateDate;
 
-    @OneToMany
-    List<Coupon> Coupons;
+    // @OneToMany
+    // List<Coupon> Coupons;
 
 
-    public List<Coupon> getCoupons() {
-        return Coupons;
-    }
+    // public List<Coupon> getCoupons() {
+    //     return Coupons;
+    // }
 
-    public void setCoupons(List<Coupon> coupons) {
-        Coupons = coupons;
-    }
+    // public void setCoupons(List<Coupon> coupons) {
+    //     Coupons = coupons;
+    // }
 
     public Date getCreateDate() {
         return createDate;

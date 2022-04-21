@@ -14,6 +14,18 @@ public class Coupon {
 
     Date createDate;
 
+    @ManyToOne
+    Payment payment;
+
+
+    public Payment getPayment() {
+        return payment;
+    }
+
+    public void setPayment(Payment payment) {
+        this.payment = payment;
+    }
+
     public Long getCouponAmount() {
         return couponAmount;
     }
