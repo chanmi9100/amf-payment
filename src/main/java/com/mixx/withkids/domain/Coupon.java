@@ -4,7 +4,10 @@ import java.util.Date;
 
 import javax.persistence.*;
 
+import org.hibernate.annotations.DynamicUpdate;
+
 @Entity
+@DynamicUpdate
 public class Coupon {
 
     @Id @GeneratedValue
@@ -16,6 +19,14 @@ public class Coupon {
 
     @ManyToOne
     Payment payment;
+    
+    public Payment getPayment() {
+        return payment;
+    }
+
+    public void setPayment(Payment payment) {
+        this.payment = payment;
+    }
 
     public Long getAmount() {
         return amount;
@@ -23,14 +34,6 @@ public class Coupon {
 
     public void setAmount(Long amount) {
         this.amount = amount;
-    }
-
-    public Payment getPayment() {
-        return payment;
-    }
-
-    public void setPayment(Payment payment) {
-        this.payment = payment;
     }
 
     public Long getId() {

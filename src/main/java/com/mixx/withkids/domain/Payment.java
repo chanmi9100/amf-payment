@@ -35,6 +35,12 @@ public class Payment {
     //     Coupons = coupons;
     // }
 
+    public Payment() {}
+
+    public Payment(Long id) {
+        setId(id);
+    }
+
     public Date getCreateDate() {
         return createDate;
     }
