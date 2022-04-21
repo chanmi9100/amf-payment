@@ -1,6 +1,8 @@
 # AMF 결제 도메인 구현
 
 ## httpie
+http 도구설치: pip install httpie
+
 - 쿠폰 등록
 http :8080/coupons amount="10000"
 
