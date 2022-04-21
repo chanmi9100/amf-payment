@@ -10,13 +10,20 @@ public class Coupon {
     @Id @GeneratedValue
 	Long id;
 
-    Long couponAmount;
+    Long amount;
 
     Date createDate;
 
     @ManyToOne
     Payment payment;
 
+    public Long getAmount() {
+        return amount;
+    }
+
+    public void setAmount(Long amount) {
+        this.amount = amount;
+    }
 
     public Payment getPayment() {
         return payment;
@@ -24,14 +31,6 @@ public class Coupon {
 
     public void setPayment(Payment payment) {
         this.payment = payment;
-    }
-
-    public Long getCouponAmount() {
-        return couponAmount;
-    }
-
-    public void setCouponAmount(Long couponAmount) {
-        this.couponAmount = couponAmount;
     }
 
     public Long getId() {

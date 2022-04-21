@@ -2,7 +2,7 @@
 
 ## httpie
 - 쿠폰 등록
-http :8080/coupons couponAmount="10000"
+http :8080/coupons amount="10000"
 
 - 결제 등록
 http :8080/payments amount=30000 reservationId="A02"
