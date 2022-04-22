@@ -13,8 +13,6 @@ public class Payment {
 
     Long amount;
     
-    String reservationId;
-
     Status status;
     
     PayType payType;
@@ -87,14 +85,6 @@ public class Payment {
 
     public void setStatus(Status status) {
         this.status = status;
-    }
-
-    public String getReservationId() {
-        return reservationId;
-    }
-
-    public void setReservationId(String reservationId) {
-        this.reservationId = reservationId;
     }
 
 }

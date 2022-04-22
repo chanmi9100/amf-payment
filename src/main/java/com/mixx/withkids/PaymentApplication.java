@@ -28,7 +28,6 @@ public class PaymentApplication {
 		payment.setAmount(Long.valueOf(10000));
 		payment.setStatus(Status.진행중);
 		payment.setPayType(PayType.카드);
-		payment.setReservationId("A01");
 
 		repository.save(payment);
 
