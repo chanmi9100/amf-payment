@@ -14,3 +14,29 @@ spring:
     username: root
     password: admin
     driverClassName: com.mysql.cj.jdbc.Driver
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:29092
+        streams:
+          binder:
+            configuration:
+              default:
+                key:
+                  serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+                value:
+                  serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+      bindings:
+        # event-in:
+        #   group: payment-group
+        #   destination: payment
+        #   contentType: application/json
+        event-out:
+          destination: payment
+          contentType: application/json
+
+logging:
+  level:
+    org.hibernate.type: trace
+    org.springframework.cloud: debug

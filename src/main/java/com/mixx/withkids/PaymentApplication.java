@@ -9,9 +9,13 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.cloud.stream.annotation.EnableBinding;
+
+import com.mixx.withkids.kafka.KafkaProcessor;
 
 @SpringBootApplication
 @RestController
+@EnableBinding(KafkaProcessor.class)
 public class PaymentApplication {
 
 	static ApplicationContext applicationContext;

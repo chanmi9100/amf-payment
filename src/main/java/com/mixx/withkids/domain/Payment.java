@@ -87,4 +87,13 @@ public class Payment {
         this.status = status;
     }
 
+
+    @PostPersist
+    public void onPostPersist(){
+        PaymentComplete paymentComplete = new PaymentComplete();
+        paymentComplete.setPaymentId(this.getId());
+        paymentComplete.setStatus(this.getStatus());
+        paymentComplete.publishAfterCommit();
+    }
+
 }
